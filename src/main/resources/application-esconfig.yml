@@ -1,0 +1,8 @@
+# 整合ES配置
+spring:
+  elasticsearch:
+    rest:
+      uris: http://localhost:9200
+
+
+

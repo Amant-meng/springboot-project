@@ -1,0 +1,60 @@
+spring:
+  profiles:
+    # 激活配置文件
+    active: dev
+
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    serialization:
+      indent_output: true
+
+  #打war时指定静态文件，没有效果
+  resources:
+    static-locations: classpath:/static,classpath:/public
+
+
+# 开发环境配置
+server:
+  servlet:
+    # 应用的访问路径
+    context-path: /
+    encoding:
+      charset: UTF-8
+  tomcat:
+    # tomcat的URI编码
+    uri-encoding: UTF-8
+    # tomcat最大线程数，默认为200
+    max-threads: 800
+    # Tomcat启动初始化的线程数，默认值25
+    min-spare-threads: 30
+
+
+# mybatis-plus 配置
+mybatis-plus:
+  # mybatis Mapper 所对应的xml文件位置
+  mapper-locations: classpath*:/mapper/**/**Mapper.xml
+  # 实体类文件路径
+  type-aliases-package: com.ym.springbootproject.moudle.**.entity.**
+  # 启动时是否检查mybatis xml文件，默认不检查
+  check-config-location: false
+  # ExecutorType.SIMPLE : 该执行器类型不做特殊的事情，为每个语句的执行创建一个新的预处理语句
+  # ExecutorType.REUSE : 该执行器类型会复用预处理语句（PreparedStatement）
+  # ExecutorType.BATCH : 该执行器类型会批量执行所有更新语句
+  executor-type: simple
+  configuration:
+    # 是否开启自动驼峰命名规则
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+    global-config:
+      #驼峰下划线转换
+      db-config:
+        logic-not-delete-value: 0
+        logic-delete-value: 1
+        table-underline: true
+
+# Swagger配置
+swagger:
+  # 是否开启swagger
+  enabled: false
