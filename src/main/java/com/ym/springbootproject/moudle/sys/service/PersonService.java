@@ -10,4 +10,5 @@ public interface PersonService extends IService<Person> {
 
     List<Map> selectPerson();
 
+    List<Person> selectPersonList();
 }

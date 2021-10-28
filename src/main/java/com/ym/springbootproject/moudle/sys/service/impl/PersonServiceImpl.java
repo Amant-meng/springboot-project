@@ -31,5 +31,10 @@ public class PersonServiceImpl extends ServiceImpl<PersonMapper, Person> impleme
         return personMapper.selectPerson();
     }
 
+    @Override
+    public List<Person> selectPersonList() {
+        return personMapper.selectAll();
+    }
+
 
 }

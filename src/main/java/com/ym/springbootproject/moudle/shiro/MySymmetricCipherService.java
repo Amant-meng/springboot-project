@@ -52,7 +52,7 @@ public class MySymmetricCipherService extends AbstractSymmetricCipherService {
         Key gKey = mySymmetricCipherService.generateNewKey();
         System.out.println("key: " + gKey.getEncoded());
         System.out.println("key Base64.encodeToString: " + Base64.encodeToString(gKey.getEncoded()));
-        byte[] decodeValue = org.apache.shiro.codec.Base64.decode("t0EWNQWKMXYzKTDSQpNNfg==");
+        byte[] decodeValue = org.apache.shiro.codec.Base64.decode(gKey.getEncoded());
         System.out.println("decodeValue: " + decodeValue);
     }
 

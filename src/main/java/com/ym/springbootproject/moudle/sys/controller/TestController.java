@@ -1,6 +1,5 @@
 package com.ym.springbootproject.moudle.sys.controller;
 
-import com.alibaba.fastjson.JSON;
 import com.ym.springbootproject.common.ResultBody;
 import com.ym.springbootproject.common.core.AjaxResult;
 import com.ym.springbootproject.common.utils.poi.ExcelUtil;
@@ -11,8 +10,6 @@ import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.text.ParseException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -87,6 +84,7 @@ public class TestController {
         }
         return idCard;
     }
+
 
 
 }

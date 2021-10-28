@@ -1,6 +1,7 @@
 package com.ym.springbootproject.moudle.sys.controller;
 
 import com.ym.springbootproject.common.ResultBody;
+import com.ym.springbootproject.moudle.sys.entity.Person;
 import com.ym.springbootproject.moudle.sys.service.PersonService;
 import com.ym.springbootproject.moudle.sys.service.TestService;
 import io.swagger.annotations.Api;
@@ -37,6 +38,17 @@ public class PersonController {
     @ApiOperation(value = "查询人员信息列表")
     public ResultBody selectPerson(){
         List<Map> list = personService.selectPerson();
+        return ResultBody.ok(list);
+    }
+
+    /**
+     * 查询人员信息列表
+     * @return
+     */
+    @GetMapping("/selectPersonList")
+    @ApiOperation(value = "查询人员信息列表")
+    public ResultBody selectPersonList(){
+        List<Person> list = personService.selectPersonList();
         return ResultBody.ok(list);
     }
 
