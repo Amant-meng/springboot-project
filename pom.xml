@@ -12,8 +12,8 @@
     <artifactId>springboot-project</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-project</name>
-    <packaging>jar</packaging>
-<!--    <packaging>war</packaging>-->
+<!--    <packaging>jar</packaging>-->
+    <packaging>war</packaging>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
@@ -228,7 +228,7 @@
 
     <build>
         <!-- 项目打包名称 -->
-        <finalName>my_springboot</finalName>
+        <finalName>mySpringboot</finalName>
         <resources>
             <resource>
                 <!-- 指定资源的位置 -->
