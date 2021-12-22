@@ -5,10 +5,15 @@ import com.ym.springbootproject.moudle.sys.entity.Person;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public interface PersonService extends IService<Person> {
 
     List<Map> selectPerson();
 
     List<Person> selectPersonList();
+
+    Set<String> getUserPermissions();
+
+    Person getUserByName(String name);
 }
