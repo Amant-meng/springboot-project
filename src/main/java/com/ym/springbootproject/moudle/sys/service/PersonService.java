@@ -1,6 +1,7 @@
 package com.ym.springbootproject.moudle.sys.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.ym.springbootproject.common.ResultBody;
 import com.ym.springbootproject.moudle.sys.entity.Person;
 
 import java.util.List;
@@ -16,4 +17,8 @@ public interface PersonService extends IService<Person> {
     Set<String> getUserPermissions();
 
     Person getUserByName(String name);
+
+    ResultBody addPerson(List<Person> personList);
+
+    ResultBody updatePerson(List<Person> personList);
 }

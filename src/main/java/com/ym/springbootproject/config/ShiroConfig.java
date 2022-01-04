@@ -19,7 +19,7 @@ import java.util.Map;
  * @Description: TODO Shiro配置类
  * @date 2021/12/8 18:08
  */
-@Configuration
+//@Configuration
 public class ShiroConfig {
 
     @Bean
