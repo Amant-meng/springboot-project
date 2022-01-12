@@ -13,7 +13,24 @@ spring:
   #打war时指定静态文件，没有效果
   resources:
     static-locations: classpath:/static,classpath:/public
-
+#thymeleaf模板引擎配置
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    check-template: true
+    servlet:
+      content-type: text/html
+    enabled: true
+    encoding: UTF-8
+    prefix: classpath:/static/
+    suffix: .html
+  web:
+    resources:
+      chain:
+        strategy:
+          content:
+            enabled: true
+            paths: /**
 
 # 开发环境配置
 server:

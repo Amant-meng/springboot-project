@@ -51,7 +51,7 @@ public class ExcelExportController {
     PersonMapper personMapper;
 
     /**
-     * 测试数据导出功能，使用的是若依框架导出
+     * 测试数据导出功能，使用的是【若依框架导出】
      * @return
      */
     @PostMapping("/export")
@@ -147,7 +147,7 @@ public class ExcelExportController {
     }
 
     /**
-     *  使用easypoi导出框架,导出人员信息
+     *  使用【easypoi导出框架】,导出人员信息
      * @param response
      */
     @GetMapping("/easypoiExport")
@@ -169,7 +169,7 @@ public class ExcelExportController {
             workbook.write(out);
             out.flush();
             out.close();
-            log.info("文件下载成功！");;
+            log.info("文件下载成功！");
             log.info("请求 exportExcel end ......");
         } catch (IOException e) {
             log.info("请求 exportExcel 异常：{}", e.getMessage());
