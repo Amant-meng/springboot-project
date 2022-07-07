@@ -186,4 +186,5 @@ public class SysRole extends BaseEntity {
             .append("remark", getRemark())
             .toString();
     }
+
 }
