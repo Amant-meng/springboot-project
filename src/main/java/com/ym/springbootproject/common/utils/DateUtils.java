@@ -5,6 +5,7 @@ import org.apache.commons.lang3.time.DateFormatUtils;
 import java.lang.management.ManagementFactory;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -161,4 +162,31 @@ public class DateUtils extends org.apache.commons.lang3.time.DateUtils
         // long sec = diff % nd % nh % nm / ns;
         return day + "天" + hour + "小时" + min + "分钟";
     }
+
+    /**
+     * 获取指定日期的前几天或后几天
+     * @param dateStr 指定日期
+     * @param format 日期格式
+     * @param flag true为获取后几天, false:为获取前几天
+     * @param day 指定需要获取的天数
+     * @return
+     */
+    public String getDate(String dateStr,String format,boolean flag, int day){
+        Calendar c = Calendar.getInstance();
+        Date date = null;
+        try {
+            date = new SimpleDateFormat(format).parse(dateStr);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        c.setTime(date);
+        int day1 = c.get(Calendar.DATE);
+        if (flag) {
+            c.set(Calendar.DATE, day1 + day);
+        }else {
+            c.set(Calendar.DATE, day1- day);
+        }
+        return new SimpleDateFormat(format).format(c.getTime());
+    }
+
 }
