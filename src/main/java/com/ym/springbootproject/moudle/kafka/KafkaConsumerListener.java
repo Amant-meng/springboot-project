@@ -2,6 +2,7 @@ package com.ym.springbootproject.moudle.kafka;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
+import org.springframework.stereotype.Service;
 
 
 /**
@@ -10,6 +11,7 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
  * @Date 2023/3/2 11:43
  */
 @Slf4j
+@Service
 public class KafkaConsumerListener {
 
 

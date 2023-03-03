@@ -25,7 +25,7 @@ public class KafkaListenerJob implements Runnable {
     public void run() {
         log.info("kafka消息监听任务开启...");
         while (true){
-            ConsumerRecords<String,String> records = KafkaConfig.kafkaConsumer.poll(5000);
+            ConsumerRecords<String,String> records = KafkaConfig.kafkaConsumer.poll(10000);
             log.info("开始消费信息......records:{}",records.toString());
             if(records !=null && records.count()>0){
                 for (ConsumerRecord<String,String> record:records){

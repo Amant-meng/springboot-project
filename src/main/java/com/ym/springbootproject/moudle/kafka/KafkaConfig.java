@@ -53,7 +53,7 @@ public class KafkaConfig {
         prop.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,kafkaServer);
         prop.put(ConsumerConfig.GROUP_ID_CONFIG,groupId);
         prop.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG,auto_commit_interval);
-        prop.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG,auto_commit_interval);
+        prop.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG,enable_auto_commit);
         prop.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG,auto_offset_reset);
         prop.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG,key_deserializer);
         prop.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,value_deserializer);
